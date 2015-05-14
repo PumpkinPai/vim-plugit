@@ -1,3 +1,3 @@
-" ftdetect/PLUGIT_TYPE.vim
+" ftdetect/PLUGIN_TYPE.vim
 
-autocmd BufNewFile,BufRead *.PLUGIT_TYPE setfiletype PLUGIT_TYPE
+autocmd BufNewFile,BufRead *.PLUGIN_TYPE setfiletype PLUGIN_TYPE

@@ -1,4 +1,4 @@
-" ftplugin/PLUGIT_TYPE.vim
+" ftplugin/PLUGIN_TYPE.vim
 
 """""""""""""""""""""""""""""""""""""""
 " EXAMPLES
