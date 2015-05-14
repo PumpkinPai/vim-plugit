@@ -4,5 +4,11 @@
 # This file will delete itself after running.
 
 # VARIABLES
-directories="ftplugin ftdetect"
-mkdir 
+directories="ftplugin ftdetect indent syntax"
+files="ftplugin
+
+for dir in $directories; do
+    mkdir dir
+done
+
+
