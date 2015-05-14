@@ -18,14 +18,16 @@ curDir = os.getcwd()
 for root, dirs, files in os.walk('PLUGIN_NAME'):
     for name in files:
         # todo- need to set currentFile with path
-        print(name)
-        vimFile = open(name, 'r')
+        currentFile = os.path.join(root, name)
+        print(os.path.join(root, name))
+        vimFile = open(currentFile, 'r')
         vimTxt = vimFile.read()
         vimFile.close
         # replace keyword 'PLUGIN_TYPE' with user-supplied value
         vimTxt = vimTxt.replace('PLUGIN_TYPE', pluginType)
+        print(vimTxt)
         '''
-        vimFile = open(name, 'w')
+        vimFile = open(currentFile, 'w')
         vimFile.write(vimTxt)
         vimFile.close'''
 
