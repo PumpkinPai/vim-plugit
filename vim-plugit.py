@@ -19,7 +19,6 @@ while pluginType == '' or pluginType[0].isnumeric():
     plugTypeFunction = pluginType[0].upper() + pluginType[1:-1]
 
 curDir = os.getcwd()
-# os.rename('PLUGIN_NAME', pluginName)
 
 for root, dirs, files in os.walk('PLUGIN_NAME'):
     for name in files:
@@ -43,5 +42,7 @@ for root, dirs, files in os.walk('PLUGIN_NAME'):
             # os.rename(name, pluginType + '.vim')
             print(name + ' renamed to: ' + pluginType + '.vim')
             time.sleep(0.5)
+
+# os.rename('PLUGIN_NAME', pluginName)
 
 # todo- cleanup (delete this, README.md, LICENSE, and .git folder)
