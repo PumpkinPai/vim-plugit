@@ -1,8 +1,8 @@
 " indent/PLUGIN_TYPE.vim
 
-setlocal indentexpr=PLUGIN_TYPEIndent()
+setlocal indentexpr=PLUG_TYPE_FUNCTIONIndent()
 
-function! PLUGIN_TYPEIndent()
+function! PLUG_TYPE_FUNCTIONIndent()
   let line = getline(v:lnum)
   let previousNum = prevnonblank(v:lnum -1)
   let previous =  getline(previousNum)
