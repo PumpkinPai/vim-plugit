@@ -25,6 +25,7 @@ for root, dirs, files in os.walk('PLUGIN_NAME'):
         if name.endswith('.vim'):
             # todo- need to set currentFile with path
             currentFile = os.path.join(root, name)
+            fullPath = curDir + '/' + currentFile
             print(os.path.join(root, name))
             vimFile = open(currentFile, 'r')
             vimTxt = vimFile.read()
@@ -32,15 +33,15 @@ for root, dirs, files in os.walk('PLUGIN_NAME'):
             # replace keyword 'PLUGIN_TYPE' with user-supplied value
             vimTxt = vimTxt.replace('PLUGIN_TYPE', pluginType)
             vimTxt = vimTxt.replace('PLUG_TYPE_FUNCTION', plugTypeFunction)
-            print(vimTxt)
+            # print(vimTxt)
             time.sleep(0.5)
             '''
             vimFile = open(currentFile, 'w')
             vimFile.write(vimTxt)
             vimFile.close'''
 
-            # os.rename(name, pluginType + '.vim')
-            print(name + ' renamed to: ' + pluginType + '.vim')
+            # os.rename(fullPath, pluginType + '.vim')
+            # print(name + ' renamed to: ' + pluginType + '.vim')
             time.sleep(0.5)
 
 # os.rename('PLUGIN_NAME', pluginName)
