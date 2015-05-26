@@ -24,7 +24,13 @@ for root, dirs, files in os.walk('PLUGIN_NAME'):
     for name in files:
         if name.endswith('.vim'):
             # todo- need to set currentFile with path
-            currentFile = os.path.join(root, name)
+            currentFile = name
+            currentPath = os.path.join(root) + '/'
+            fullPath = curDir + '/' + currentPath
+            print(currentFile)
+            print(currentPath)
+            print(fullPath)
+            break
             fullPath = curDir + '/' + currentFile
             print(os.path.join(root, name))
             vimFile = open(currentFile, 'r')
